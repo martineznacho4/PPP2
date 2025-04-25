@@ -1,0 +1,14 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-o",
+      "drill.out",
+      "drill.cpp"
+    ],
+    "directory": "/home/nacho/PPP/chapter4",
+    "file": "/home/nacho/PPP/chapter4/drill.cpp",
+    "output": "/home/nacho/PPP/chapter4/drill.out"
+  }
+]
