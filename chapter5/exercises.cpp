@@ -68,8 +68,59 @@ int main() {
             }
             break;
         }
-    case 6:
-        
+        case 8:
+        case 9: {
+            cout << "- Sum of N integers -" << endl;
+            cout << "Enter the amount of numbers you want to sum: " << endl;
+
+            int limit_n = 0;
+            cin >> limit_n;
+
+            cout << "Enter some integers:  '|' to stop" << endl;
+            vector<int> numbers;
+            int num;
+            while (cin >> num) {
+                numbers.push_back(num);
+            }
+
+            if (limit_n <= numbers.size() && numbers.size() > 0) {
+                double sum = numbers[0];
+
+                for (size_t i = 1; i < limit_n; ++i) {
+                    sum += numbers[i];
+                }
+
+                cout << narrow_cast<int>(sum) << endl;
+            } else {
+                error("You need to add more numbers");
+            }
+
+            break;
+        }
+
+        case 11: {
+            cout << "- Fibonacci -" << endl;
+
+            int first = 1;
+            int second = 1;
+            cout << first << endl;
+            cout << second << endl;
+
+            while (true) {
+                int next = first + second;
+
+                if (next < second) {
+                    cout << "Overflow" << endl;
+                    break;
+                }
+                cout << next << endl;
+
+                first = second;
+                second = next;
+            }
+
+            break;
+        }
     }
     return 0;
 }
